@@ -1,2 +1,2 @@
 # dwd
-Materials for dealing with data graduate moduel
+Materials for dealing with data graduate module
