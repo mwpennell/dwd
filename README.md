@@ -1,2 +1,2 @@
 # dwd
-Materials for BIOL548O -- Dealing with Data
+Materials for BIOL548O -- Dealing with Data Grad Module
