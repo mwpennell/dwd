@@ -3,6 +3,7 @@
 
 The first thing we are going to do is to set up your system so you don't have to type in your username and/or password each time. Let's follow [Jenny Bryan's excellent guide here](http://happygitwithr.com/credential-caching.html#credential-caching)
 
+###Next we recommend that you change your name to something more ridiculous than your current name - e.g. Cacagator
 
 ### Reseting repo to a specific commit
 
