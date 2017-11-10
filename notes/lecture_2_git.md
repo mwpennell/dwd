@@ -1,5 +1,6 @@
 ## Lecture 2 Commands -- Introduction to git and github
 
+- testing out the pull request - 
 
 The first thing we are going to do is to set up your system so you don't have to type in your username and/or password each time. Let's follow [Jenny Bryan's excellent guide here](http://happygitwithr.com/credential-caching.html#credential-caching)
 
