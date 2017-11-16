@@ -1,0 +1,395 @@
+Date,Trap#,New/Recap,Spp.,Tag (one),Tag (two),Sex,Age,Wt,Condition,Remarks
+May 17/07,1A,N,Ta,-,-,M,A,51,S,got hair
+May 17/07,1B,N,Pm,-,-,-,-,-,-,escapee
+May 17/07,1D,N,Pm,-,-,M,A,12,S,escapee
+May 17/07,1E,R,Pm,7915,7916,M,A,21,NS,-
+May 17/07,1H,N,Pm,4604,4606,F,A,15.5,NB,got hair
+May 17/07,1I,N,Mg,4607,4608,M,A,19.5,S,got hair
+May 17/07,1O,R,Pm,4609,8756,F,A,18.5,NB,added new tag (4609)
+May 17/07,2A,R,Mg,2513,2514,F,A,19,NB,-
+May 17/07,2C,N,Mg,2835,2836,M,A,17.5,S,got hair
+May 17/07,2D,N,Mg,4638,4639,M,A,16.5,S,-
+May 17/07,2H,N,Pm,4613,4640,M,A,17.5,S,-
+May 17/07,2L,N,Pm,4611,4612,F,A,23.5,NB,-
+May 18/07,1A,N,Mg,2513,2514,F,A,24.5,B,-
+May 18/07,1B,R,Pm,8761,8773,F,A,15,B,-
+May 18/07,1C,R,Pm,7915,7916,M,A,21,NS,-
+May 18/07,1D,N,Pm,4776,47777,M,A,18,S,-
+May 18/07,1F,R,Ta,-,-,M,A,51.5,S,hair cut from yesterday
+May 18/07,1H,R,Pm,4613,4640,M,A,18.5,S,-
+May 18/07,1L,N,Ml,-,-,M,A,-,-,brought in
+May 18/07,1N,N,Pm,4610,4800,F,A,18,NB,-
+May 18/07,1P,R,Pm,-,-,-,A,19,-,escapee
+May 18/07,1R,N,Mg,4637,4778,M,A,18.5,S,got hair
+May 18/07,1T,N,Pm,-,-,-,A,22.5,-,escapee
+May 18/07,2B,N,Ta,-,-,-,A,-,-,-
+May 18/07,2D,R,Mg,2835,2836,M,A,17,S,-
+May 18/07,2E,N,Mg,2838,2839,M,A,20,S,-
+May 18/07,2F,N,Ml,-,-,F,A,-,NB,brought in
+May 18/07,2G,R,Pm,4604,4606,F,A,16,NB,-
+May 18/07,2H,N,Mg,2840,2841,F,A,21.5,NB,-
+May 18/07,2L,R,Pm,4611,4612,F,A,25,NB,-
+May 21/07,1A,R,Pm,8761,8773,F,A,15,NB,-
+May 21/07,1C,R,Pm,7915,7916,M,A,20.5,S,-
+May 21/07,1D,R,Pm,4776,4777,M,A,18.5,S,-
+May 21/07,1F,-,Pm,-,-,-,-,-,-,escapee
+May 21/07,1G,R,Pm,4613,4640,M,A,17,S,-
+May 21/07,1H,N,Mg,4635,4636,M,A,14.5,S,got hair
+May 21/07,1I,R,Pm,4604,4606,F,A,20.5,NB,-
+May 21/07,1J,N,Zp,-,-,F,A,20,NB,got hair
+May 21/07,1K,R,Mg,4607,4608,M,A,22,S,-
+May 21/07,1N,R,Pm,4610,4800,F,A,20.5,NB,-
+May 21/07,1P,R,Pm,4609,8756,F,A,20,NB,-
+May 21/07,1R,N,Pm,4626,4627,M,A,24.5,S,got hair
+May 21/07,1S,N,Mg,-,-,-,-,-,-,escapee
+May 21/07,1T,N,Mg,4633,4634,F,A,18,B,-
+May 21/07,2A,R,Mg,2513,2514,F,A,20,NB,-
+May 21/07,2B,R,Mg,2839,-,M,A,19,S,-
+May 21/07,2C,N,Mg,4798,4799,F,A,15,B,-
+May 21/07,2D,R,Mg,4630,4631,M,A,15.5,S,lost tags
+May 21/07,2E,R,Mg,4638,4639,M,A,25,NS,-
+May 21/07,2H,R,Mg,2840,2841,M,A,22.5,S,-
+May 21/07,2J,N,Ml,-,-,M,A,20.5,S,brought in
+May 21/07,2K,R,Pm,4611,4612,F,A,22,preg,-
+May 21/07,2L,R,Pm,2320,2323,M,A,18,S,-
+May 21/07,2M,N,Pm,4628,4629,M,A,22.5,S,-
+May 22/07,1A,R,Pm,4776,4777,M,A,19,S,-
+May 22/07,1B,R,Mg,4798,4799,F,A,16,B,-
+May 22/07,1H,R,Mg,4635,4636,M,A,16,S,-
+May 22/07,1P,N,Mg,4632,4797,M,A,21,S,-
+May 22/07,1Q,R,Mg,4778,4796,M,A,?,S,1 new tag (4796)
+May 22/07,1R,R,Pm,4609,8756,F,A,20,NB,-
+May 22/07,1S,N,Ta,-,-,M,A,51,S,got hair
+May 22/07,1T,R,Pm,2320,2323,M,A,19,S,-
+May 22/07,2A,R,Mg,4630,4631,M,A,17.5,S,-
+May 22/07,2D,R,Pm,7915,7916,M,A,21,S,-
+May 22/07,2H,R,Mg,4751,4752,F,A,20.5,NB,-
+May 22/07,2J,N,Ta,-,-,F,A,past 60,NB,-
+May 22/07,2K,R,Ta,-,-,M,A,38,S,hair cut
+May 22/07,2L,R,Pm,4626,4627,M,A,21.7,S,-
+May 22/07,2M,R,Pm,4628,4629,M,A,?,?,-
+May 28/07,1B,?,Mg,-,-,-,-,-,-,escapee
+May 28/07,1E,R,Pm,8761,8773,F,A,18,B,-
+May 28/07,1K,N,Mg,-,-,-,A,-,-,hole in bag
+May 28/07,1N,N,Mg,4789,4791,M,A,18.5,S,got hair
+May 28/07,1O,N,Pm,4793,4795,F,A,17,NB,got hair
+May 28/07,1P,R,Mg,4632,4794,M,A,20.5,S,new tag (4794)
+May 28/07,1R,R,Mg,4778,4796,M,A,20,S,-
+May 28/07,1S,R,Mg,4633,-,F,A,19,B,-
+May 28/07,1T,N,Pm,4790,4792,F,A,16.5,NB,-
+May 28/07,2A,R,Mg,2513,2514,F,A,21,B,got feces
+May 28/07,2B,R,Mg,2839,-,M,A,22.5,S,got feces
+May 28/07,2G,R,Mg,right shoulder,-,M,A,22,S,"got feces, can't tag ears, clipped hair"
+May 28/07,2H,R,Mg,4851,4852,F,A,21,B,got feces
+May 28/07,2J,R,Pm,4828,4829,M,A,20,S,-
+May 28/07,2K,R,Pm,4611,4612,F,A,21,B,-
+May 28/07,2L,R,Pm,4626,4627,M,A,22,S,-
+May 29/07,1A,R,Mg,2513,2514,F,A,17.5,NB,-
+May 29/07,1C,R,Mg,4630,-,M,A,17.5,S,-
+May 29/07,1E,R,Pm,8761,8773,F,A,14.5,B,-
+May 29/07,1G,N,Ta,-,-,-,A,-,-,-
+May 29/07,1L,N,Pm,4779,4780,M,A,25.5,S,got hair
+May 29/07,1M,R,Mg,4632,4794,M,A,19,S,-
+May 29/07,1N,R,Pm,4790,4792,F,A,15,NB,-
+May 29/07,1O,R,Mg,4796,4778,M,A,21.5,S,-
+May 29/07,1R,N,Mg,4781,4782,M,A,20,S,-
+May 29/07,1S,R,Mg,4633,-,F,A,18,B,-
+May 29/07,2D,R,Mg,4797,4798,F,A,18,NB,got feces
+May 29/07,2F,R,Ta,-,-,-,-,-,-,-
+May 29/07,2G,R,Mg,right shoulder,-,M,A,22,S,-
+May 29/07,2H,R,Mg,4608,-,M,A,22,S,got feces
+May 29/07,2J,R,Pm,4628,4629,M,A,21,NS,got feces
+May 29/07,2L,R,Pm,4626,4627,M,A,21,NS,got feces
+May 29/07,2K,R,Pm,4611,4612,F,A,23,preg,-
+May 29/07,2M,R,Mg,4789,4791,M,A,19,NS,-
+June 4/07,1A,N,Zp,-,-,-,-,-,-,-
+June 4/07,1B,R,Pm,4688,4689,M,A,20.5,NS,"old tags gone, added 4688-4689"
+June 4/07,1I,R,Pm,4790,4792,F,A,16.5,NB,feces sample
+June 4/07,1N,R,Mg,4789,4791,M,A,19,S,-
+June 4/07,2B,R,Mg,4630,4729,M,A,16,S,new tag (4729)
+June 4/07,2D,R,Mg,4798,4799,F,A,16,B,-
+June 4/07,2E,R,Mg,4672,4673,M,S,?,S,"torn ears, new tags, hair taken previously"
+June 4/07,2F,-,Ta,-,-,-,-,-,-,-
+June 4/07,2G,R,Mg,4670,4671,M,A,21.5,S,"torn ears, new tags, hair taken previously, feces sample"
+June 4/07,2J,-,Ta,-,-,-,-,-,-,-
+June 4/07,2K,R,Pm,4793,4795,F,A,?,NB,"feces sample, hair taken previously"
+June 4/07,2L,R,Pm,4628,4629,M,A,20,S,-
+June 5/07,1A,R,Mg,2039,4788,M,A,21,S,new tag 4788
+June 5/07,1B,N,Pm,4786,4787,F,A,14,NB,-
+June 5/07,1I,R,Mg,4783,-,M,A,16,S,new tag 4783
+June 5/07,1L,R,Pm,4628,4629,M,A,19.5,NS,-
+June 5/07,1M,R,Mg,4789,4791,M,A,17.5,S,-
+June 5/07,1N,R,Pm,4790,4792,F,A,17.5,B,-
+June 5/07,1R,R,Pm,4780,4784,M,A,21,S,new tag 4784
+June 5/07,1S,R,Mg,4633,4774,F,A,18,B,new tag 4774
+June 5/07,1T,R,Mg,4785,4794,M,A,19,S,new tag 4785
+June 5/07,2K,R,Pm,4793,4795,F,A,17.5,NB,-
+June 5/07,2J,R,Mg,4670,4671,M,A,21.5,S,-
+June 5/07,2H,N,Ta,-,-,M,A,past 60,S,-
+June 5/07,2G,N,Ta,-,-,-,A,-,-,-
+June 5/07,2F,R,Mg,4672,4673,M,A,20.5,S,-
+June 11/07,1B,R,Pm,left shoulder,-,M,A,20.5,S,lost both tags
+June 11/07,1F,N,Zp,-,-,-,A,-,-,-
+June 11/07,1I,R,Pm,4780,-,M,A,23,S,brought in to dye
+June 11/07,1J,N,Zp,-,-,-,A,-,-,-
+June 11/07,1K,N,Ta,-,-,M,A,52,S,got feces
+June 11/07,1L,R,Mg,4755,-,M,A,23,S,"lost both tags, added 4755, hair previously taken"
+June 11/07,1M,R,Mg,4789,4791,M,A,20,S,-
+June 11/07,1O,R,Mg,4756,4774,F,A,22,B,added new tag (4756)
+June 11/07,1S,R,Pm,4790,4792,F,A,19,preg?,-
+June 11/07,1T,R,Mg,4757,4794,M,A,21,S,added new tag (4757)
+June 11/07,2A,R,Mg,4661,4662,F,A,14,NB,"new tags, got feces"
+June 11/07,2D,R,Mg,4788,-,M,A,21,S,-
+June 11/07,2K,N,Pm,4663,4664,M,A,-,S,"hair sample, brought in to dye"
+June 11/07,2L,R,Pm,4793,4795,F,A,16,lactating,-
+June 12/07,1H,R,Pm,4780,-,M,A,-,S,fully dyed
+June 12/07,1J,N,Zp,-,-,-,A,-,-,"""took exception to Crisia's face and hotfooted it"""
+June 12/07,1M,R,Mg,4755,-,M,A,-,S,-
+June 12/07,1N,R,Pm,4790,4792,F,A,-,preg,-
+June 12/07,1O,R,Mg,4756,4774,F,A,-,B,-
+June 12/07,2D,R,Mg,right shoulder,-,M,A,-,S,-
+June 12/07,2E,R,Mg,4661,4662,F,A,-,B,-
+June 12/07,2L,R,Pm,4663,4664,M,A,-,S,fully dyed
+June 19/07,1B,R,Pm,4758,-,M,A,21.5,S,1 new tag (4758)
+June 19/07,1J,R,Pm,4663,4664,M,A,22,S,fully dyed- hair loss
+June 19/07,1K,N,Zp,-,-,F,A,24,NB,-
+June 19/07,1L,R,Pm,4790,4792,F,A,19,lactating,-
+June 19/07,1N,R,Mg,4759,4794,M,A,20,S,1 new tag (4759)
+June 19/07,1P,R,Mg,4756,-,F,A,24,B,-
+June 19/07,1S,N,Mg,-,-,M,A,-,S,dead in trap
+June 19/07,1T,R,Pm,4780,-,M,A,25,S,fully dyed- hair loss
+June 19/07,2C,R,Mg,right shoulder,-,M,A,24,S,-
+June 19/07,2G,R,Mg,4755,-,M,A,21,S,-
+June 19/07,2L,R,Mg,4789,4791,M,A,17,S,-
+June 20/07,1A,R,Pm,4758,-,M,A,18.5,S,-
+June 20/07,1B,R,Pm,b/w shoulders,-,F,A,15,NB,lost both tags
+June 20/07,1J,R,Ta,-,-,F,A,53,NB,-
+June 20/07,1N,R,Mg,4759,4794,M,A,18,S,-
+June 20/07,1O,R,Mg,4756,-,F,A,25,preg,-
+June 20/07,1P,R,Pm,4780 (?),-,M,A,19.5,S,fully dyed- hair loss
+June 20/07,1R,R,Pm,4790,4792,F,A,19.5,lactating,-
+June 20/07,1T,N,Ta,-,-,F,A,60+,lactating,-
+June 20/07,2A,N,Mg,right shoulder,-,M,A,21,S,-
+June 20/07,2D,R,Mg,2795,-,M,A,22.5,S,-
+June 20/07,2L,R,Mg,4789,4791,M,A,19,S,-
+June 24/07,1B,R,Pm,4758,-,M,A,19,S,-
+June 24/07,1F,N,Ta,-,-,-,A,-,-,-
+June 24/07,1H,N,Pm,2 circles on either side of bum,,M,A,19.5,S,feces sample
+June 24/07,1M,R,Mg,4789,4791,M,A,19,S,-
+June 24/07,1N,R,Pm,4790,4792,F,A,18,lactating,-
+June 24/07,1O,R,Mg,4759,4794,M,A,18,S,-
+June 24/07,2G,R,Mg,right shoulder,-,M,A,-,S,-
+June 24/07,2H,R,Mg,4755,right bum cheek,M,A,-,S,-
+June 24/07,2K,R,Pm,hair loss on bum,,M,A,-,S,-
+June 24/07,2L,R,Pm,b/w shoulders & on bum,,F,A,-,lactating,-
+June 26/07,1F,R,Pm,4764,4765,M,A,18,S,2 circles either side of bum
+June 26/07,1G,R,Ta,-,-,M,A,52,S,-
+June 26/07,1I,R,Mg,4755,-,M,A,23,S,right bum cheek
+June 26/07,1J,N,Pm,4769,4770,M,A,18.5,S,got hair
+June 26/07,1L,N,Zp,-,-,F,A,26,B,got hair
+June 26/07,1M,R,Mg,4789,4791,M,A,18,S,-
+June 26/07,1N,R,Mg,4759,4794,M,A,20.5,S,-
+June 26/07,1R,R,Pm,4790,4792,F,A,16,lactating,-
+June 26/07,1S,N,Zp,-,-,M,A,21,S,-
+June 26/07,2D,R,Pm,4758,-,M,A,19.5,S,-
+June 26/07,2E,N,Zp,-,-,M,A,24,NS,-
+June 26/07,2F,R,Mg,right shoulder,-,M,A,20.5,S,-
+June 26/07,2I,N,Zp,-,-,-,A,-,-,jumped out
+June 26/07,2J,R,Pm,hair loss on bum,,M,A,16,S,dyed
+June 26/07,2K,R,Ta,-,-,M,A,50,NS,-
+June 26/07,2L,R,Pm,b/w shoulders & on bum,,F,A,18.5,lactating,-
+June 26/07,2M,N,Mg,4767,4768,M,A,19.5,S,got hair
+July 2/07,1F,N,Ta,-,-,-,-,-,-,-
+July 2/07,1H,N,Ta,-,-,-,-,-,-,-
+July 2/07,1L,N,Ta,-,-,-,-,-,-,-
+July 2/07,1O,R,Mg,4759,4794,M,A,19,S,looked dead in trap but was alive
+July 2/07,1S,-,Zp,-,-,-,A,-,-,-
+July 2/07,1T,R,Pm,hair loss on bum,,M,A,17.5,-,dead in trap
+July 2/07,2H,R,Mg,4766,-,-,A,28.5,-,"1 new tag (4766), hair cut on bum & middle back, probably pregnant"
+July 2/07,2I,R,Mg,4755,-,M,A,20,S,right bum cheek
+July 2/07,2J,R,Pm,b/w shoulder & on bum,,F,A,19,lactating,-
+July 2/07,2L,R,Pm,4769,4770,M,A,18.5,S,-
+July 2/07,2M,R,Mg,4789,4791,M,A,19.5,S,-
+July 4/07,1B,R,Pm,left shoulder,-,M,A,21,S,"tags lost, haircut on left shoulder"
+July 4/07,1E,-,Mg,-,-,-,A,-,-,-
+July 4/07,1J,N,Ta,-,-,-,A,-,-,-
+July 4/07,1K,N,Ta,-,-,-,A,-,-,-
+July 4/07,1O,R,Mg,4759,4794,M,A,18,S,-
+July 4/07,1R,R,Pm,4769,4770,M,A,17.5,A,poop
+July 4/07,1T,-,Zp,-,-,-,A,-,-,-
+July 4/07,2F,N,Ta,-,-,F,A,over 60,lactating,got hair
+July 4/07,2H,R,Mg,4766,-,F,A,27,lactating,-
+July 4/07,2L,N,Ta,-,-,F,A,over 60,lactating,-
+July 4/07,2M,R,Mg,4789,4791,M,A,19,S,-
+July 9/07,1F,R,Pm,4764,4765,M,A,20,S,previous haircut
+July 9/07,1J,R,Zp,-,-,M,A,16,S,previous haircut
+July 9/07,1N,R,Ta,-,-,F,A,over 60,NB,previous haircut
+July 9/07,1O,R,Mg,-,-,-,-,-,-,escapee- jumped out of tunnel
+July 9/07,2D,R,Ta,-,-,M,A,51,NS,-
+July 9/07,2G,R,Mg,4766,-,F,A,25.5,B,poop
+July 9/07,2I,R,Mg,4755,-,M,A,22.5,S,-
+July 9/07,2L,R,Mg,4789,4791,M,A,19,S,-
+July 9/07,2R,R,Ta,-,-,F,A,over 60,lactating,poop
+July 14/07,1A,N,Ta,-,-,-,-,-,-,-
+July 14/07,1F,R,Pm,4769,-,M,A,19,S,-
+July 14/07,1K,-,Ta,-,-,-,-,-,-,-
+July 14/07,1N,R,Mg,-,-,-,A,-,-,escapee
+July 14/07,1S,R,Zp,-,-,F,A,14,NB,hair previously taken
+July 14/07,2D,R,Ta,-,-,F,A,over 60,lactating,hair previously taken
+July 14/07,2F,-,Zp,-,-,M,A,25.5,S,-
+July 14/07,2I,R,Mg,4755,-,M,A,-,S,hair previously taken
+July 14/07,2L,R,Mg,4784,4791,M,A,18,S,hair previously taken
+July 17/07,1B,R,Ta,-,-,M,A,51.5,S,-
+July 17/07,1D,R,Mg,2795,-,M,A,20.5,S,-
+July 17/07,1G,R,Pm,4765,-,M,A,18,S,2 dots either side of tail
+July 17/07,1I,R,Ta,-,-,F,A,over 60,lactating,-
+July 17/07,1M,N,Zp,-,-,F,A,24,B,hair
+July 17/07,1N,N,Zp,-,-,M,A,33,S,-
+July 17/07,1S,R,Mg,4759,4794,M,A,19,S,-
+July 17/07,1T,N,Mg,4845,4846,F,A,18.5,B,"hair, poop"
+July 17/07,2I,R,Ta,-,-,F,A,52,lactating,hair previously taken
+July 17/07,2J,R,Mg,right bum cheek,,M,A,24,S,lost tag 4755
+July 17/07,2L,R,Pm,4722,4723,F,A,20,lactating,"hair previously taken, replaced b/w shoulders & on bum"
+July 17/07,2M,-,Ta,-,-,F,A,over 60,lactating,hair taken
+July 19/07,1F,R,Pm,4765,-,M,A,20.5,S,hair loss left lower back
+July 19/07,1G,R,Zp,-,-,F,A,25.5,lactating,-
+July 19/07,1I,-,Zp,-,-,-,A,-,-,-
+July 19/07,1J,R,Ta,-,-,F,A,over 60,lactating,-
+July 19/07,1K,N,Pm,4726,4727,M,A,24,S,"hair, poop"
+July 19/07,1L,R,Pm,4722,4723,F,A,22.5,lactating,-
+July 19/07,1R,R,Mg,4759,4794,M,A,22,S,-
+July 19/07,1S,-,Zp,-,-,-,A,-,-,-
+July 19/07,1T,R,Mg,4845,4846,M,A,22,S,-
+July 19/07,2A,R,Ta,-,-,M,A,51,S,-
+July 19/07,2E,R,Mg,right shoulder,-,M,A,-,S,-
+July 19/07,2G,R,Pm,4704,4705,M,A,20,S,"new tags, poo, possibly lost 4758"
+July 19/07,2I,R,Mg,right bum cheek,,M,A,19,S,poop
+July 19/07,2L,R,Pm,4769,-,M,A,18.5,S,-
+July 23/07,1A,R,Pm,4328,-,F,A,17,NB,"lost tags, added tag 4328"
+July 23/07,1F,N,Ml,-,-,F,A,27,NB,brought into lab
+July 23/07,1H,R,Pm,both bum cheeks,,F,A,18,preg,"tags lost, haircut on both bum cheeks"
+July 23/07,1I,R,Pm,4726,4727,M,A,20,S,-
+July 23/07,1J,R,Pm,4704,4705,M,A,21,S,-
+July 23/07,1K,-,Ta,-,-,-,-,-,-,-
+July 23/07,1N,R,Zp,-,-,F,A,24,B,previous haircut
+July 23/07,1R,R,Mg,4759,4794,M,A,19,S,-
+July 23/07,1T,R,Mg,4845,-,F,A,22,lactating,-
+July 23/07,2D,R,Ta,-,-,M,A,39,S,-
+July 23/07,2G,R,Ta,-,-,F,A,over 60,lactating,-
+July 23/07,2H,R,Mg,4766,right bum cheek,F,A,32,B/lactating,-
+July 23/07,2I,-,Zp,-,-,-,-,-,-,escapee
+July 23/07,2L,R,Pm,4722,4723,F,A,18,lactating,hair previously taken
+July 23/07,2M,R,Ta,-,-,F,A,over 60,lactating,-
+July 25/07,1N,R,Ta,-,-,F,A,over 60,lactating,-
+July 25/07,1R,R,Mg,4759,4794,M,A,20,S,-
+July 25/07,2A,-,Zp,-,-,-,-,-,-,escapee
+July 25/07,2G,R,Mg,right shoulder,-,M,A,19,S,-
+July 25/07,2H,R,Pm,4704,4705,M,A,20,S,
+July 25/07,2I,R,Pm,4769,-,M,A,19,S,-
+July 25/07,2J,R,Ta,-,-,M,A,over 60,S,-
+July 25/07,2L,R,Ta,-,-,F,A,over 60,lactating,-
+July 30/07,1A,R,Pm,4328,-,F,A,-,lactating,-
+July 30/07,1B,R,Pm,4709,4710,M,A,-,S,"re-tags, haircut on left & right bum cheeks"
+July 30/07,1D,-,Zp,-,-,-,-,-,-,escapee
+July 30/07,1T,R,Mg,-,-,-,-,-,-,escapee
+July 30/07,2A,R,Ta,-,-,F,A,-,lactating,-
+July 30/07,2B,R,Ta,-,-,-,-,-,-,released
+July 30/07,2D,N,Pm,4711,4712,F,J,-,NB,-
+July 30/07,2G,R,Mg,4766,-,F,A,-,lactating,-
+July 30/07,2I,R,Pm,4769,-,M,A,-,S,-
+July 30/07,2J,-,Zp,-,-,-,-,-,-,escapee
+July 30/07,2L,-,Ta,-,-,-,-,-,-,escapee
+July 30/07,2M,R,Ta,-,-,F,A,-,lactating,escapee
+Aug 1/07,1A,R,Pm,4328,-,F,A,20,NB,-
+Aug 1/07,1D,R,Pm,4709,-,M,A,17,S,-
+Aug 1/07,1I,-,Zp,-,-,-,A,-,-,escapee
+Aug 1/07,1K,R,Ta,-,-,M,A,over 60,S,-
+Aug 1/07,1L,R,Pm,4769,-,M,A,18,S,-
+Aug 1/07,1O,N,Pm,4699,4742,M,J,9.5,NS,hair and poo sample
+Aug 1/07,1R,-,Zp,-,-,-,A,-,-,escapee
+Aug 1/07,1T,R,Mg,4759,-,M,A,19,S,-
+Aug 1/07,2A,N,Mn,-,-,-,A,-,-,eating remains in trap
+Aug 1/07,2K,-,Ta,-,-,-,A,-,-,-
+Aug 1/07,2L,-,Ta,-,-,-,A,-,-,-
+Aug 7/07,1A,R,Pm,4328,-,F,A,17,NB,-
+Aug 7/07,1B,R,Pm,4709,-,M,A,17,S,"feces sample, tag #s covered in poo"
+Aug 7/07,1E,N,Pm,4326,4743,F,J,12,NB,-
+Aug 7/07,1K,R,Pm,-,-,-,J,-,-,escapee
+Aug 7/07,1N,R,Ta,-,-,F,A,over 60,lactating,previous haircut
+Aug 7/07,1P,N,Pm,4327,4744,F,J,22,NB,got hair
+Aug 7/07,1R,-,Zp,-,-,-,A,-,-,escapee
+Aug 7/07,1T,R,Mg,4716,-,F,A,17,lactating,new tag
+Aug 7/07,2G,R,Pm,4711,4712,F,J,13.5,NB,-
+Aug 7/07,2H,R,Ta,-,-,F,A,over 60,lactating,-
+Aug 7/07,2I,R,Ta,-,-,F,A,over 60,lactating,-
+Aug 7/07,2J,R,Pm,4722,-,F,A,30,preg,lost tag 4723
+Aug 7/07,2L,R,Pm,4769,-,M,A,17,S,-
+Aug 7/07,2M,R,Ta,-,-,F,A,over 60,lactating,-
+Aug 9/07,1B,R,Pm,4711,4712,F,A,17,B,"looks like adult, full brown"
+Aug 9/07,1D,R,Pm,-,-,M,A,19,S,"missing tags, haircut on left shoulder"
+Aug 9/07,1L,-,Pm,-,-,-,J,-,-,escapee
+Aug 9/07,1N,N,Mn,-,-,-,A,-,-,almost dead in trap
+Aug 9/07,1R,R,Mg,4716,-,F,A,24,lactating,-
+Aug 9/07,1T,N,Zp,-,-,-,A,-,-,escapee
+Aug 9/07,2A,-,Zp,-,-,M,A,26,S,-
+Aug 9/07,2D,-,Pm,-,-,-,-,-,-,escapee
+Aug 9/07,2F,-,Zp,-,-,M,A,32,S,"hair sample, brought in to dye"
+Aug 9/07,2G,N,Pm,4717,4718,F,J,15,NB,-
+Aug 9/07,2H,R,Ta,-,-,F,A,over 60,lactating,-
+Aug 9/07,2J,R,Pm,4722,-,F,A,23.5,lactating,escapee
+Aug 13/07,1A,R,Pm,4711,-,F,A,18,B,lost tag 4712
+Aug 13/07,1I,N,Ta,-,-,F,A,over 60,preg?,escapee
+Aug 13/07,1R,R,Zp,-,-,M,A,31,S,hair previously taken
+Aug 13/07,1S,R,Mg,4716,-,F,A,20.5,lactating,-
+Aug 13/07,2A,N,Mg,4719,4720,F,A,27.5,lactating,got hair
+Aug 13/07,2D,N,Pm,4715,4721,F,J,11.5,NB,dying?
+Aug 13/07,2G,R,Zp,-,-,M,A,26.5,S,-
+Aug 13/07,2H,R,Pm,4722,-,F,A,16,lactating,-
+Aug 15/07,1B,R,Pm,4705,-,M,A,18.5,S,hair previously taken
+Aug 15/07,1J,R,Pm,left shoulder,-,M,A,20,S,"missing tags, haircut on left shoulder"
+Aug 15/07,1K,N,Pm,4740,4741,F,A,19,B,got hair
+Aug 15/07,1L,R,Pm,4769,-,M,A,18.5,S,hair previously taken
+Aug 15/07,1O,R,Pm,-,-,-,J,-,-,escapee
+Aug 15/07,1R,N,Pm,4376,4377,F,A,18,lactating,"bald spot on left side, got hair"
+Aug 15/07,2A,R,Ta,-,-,F,A,over 60,lactating,-
+Aug 15/07,2G,R,Pm,4711,-,F,J,13,NB,-
+Aug 15/07,2J,R,Pm,4722,-,F,A,19.5,lactating,-
+Aug 20/07,1G,-,Ta,-,-,-,A,-,-,-
+Aug 20/07,1H,R,Pm,left shoulder,-,M,A,19,S,missing tags
+Aug 20/07,1M,N,Mg,4738,4739,F,A,28,preg?,escaped before I got hair
+Aug 20/07,1R,R,Pm,4376,4377,F,A,17.5,lactating,-
+Aug 20/07,2F,N,Zp,-,-,M,J,19,NS,-
+Aug 20/07,2G,R,Pm,4705,-,M,A,21,S,-
+Aug 20/07,2H,R,Pm,4769,-,M,A,20,S,-
+Aug 20/07,2K,N,Mg,4379,4380,F,J,13.5,NB,-
+Aug 20/07,2L,R,Pm,right shoulder/lower back,,F,A,over 60,preg/lac,hair lower back + right shoulder
+Aug 20/07,2M,N,Mg,4381,4382,F,A,21,lactating,hair
+Aug 24/07,1A,R,Pm,4705,-,M,A,21.5,S,-
+Aug 24/07,1H,R,Pm,left shoulder,-,M,A,19.5,S,-
+Aug 24/07,1N,R,Mg,4756,-,F,A,25.5,preg?,-
+Aug 24/07,1O,R,Mg,-,-,F,A,-,-,-
+Aug 24/07,1S,N,Mg,4385,4386,F,J,13,NB,no hair taken
+Aug 24/07,2G,R,Pm,4383,4384,F,J,15,NB,"new tags, hair prev. taken"
+Aug 24/07,2I,N,Ta,-,-,F,A,over 60,lactating,got hair
+Aug 24/07,2L,R,Pm,right shoulder/lower back,,F,A,20.5,lactating,lost tags
+Aug 25/07,1A,R,Pm,4705,-,M,A,21,S,-
+Aug 25/07,1B,R,Pm,4383,4384,F,J,16,NB,-
+Aug 25/07,1J,-,Zp,-,-,-,A,-,NB,escapee
+Aug 25/07,1K,R,Pm,right shoulder/lower back,,F,A,22.5,P/L,-
+Aug 25/07,1L,R,Pm,4769,-,M,A,19.5,S,-
+Aug 25/07,1P,R,Zp,-,-,F,A,-,B,escapee
+Aug 25/07,1R,R,Pm,4376,4377,F,A,22,lactating,-
+Aug 25/07,1S,R,Mg,4385,4386,F,J,11.5,NB,-
+Aug 25/07,2A,N,Mg,4349,4350,M,J,12.5,NS,got hair
+Aug 25/07,2B,R,Mg,4719,4720,F,A,21.5,NB,-
+Aug 25/07,2H,R,Pm,4734,4735,M,A,25,S,added new tags
+Aug 25/07,2L,R,Pm,4736,4737,F,J,12,NB,added new tags
+Aug 29/07,1A,R,Pm,4705,-,M,A,18.5,S,-
+Aug 29/07,1O,R,Pm,4736,4737,F,A,14.5,NB,-
+Aug 29/07,1R,R,Pm,-,-,-,J,-,-,escapee
+Aug 29/07,1S,R,Mg,4385,4386,F,A,14,NB,-
+Aug 29/07,2A,R,Pm,4734,4735,M,A,18.5,NS,-
+Aug 29/07,2D,R,Pm,4715,4721,F,A,14,NB,-
+Aug 29/07,2I,R,Ta,-,-,F,A,57,lactating,-
+Aug 29/07,2J,R,Pm,right shoulder/lower back,,F,A,22.5,lactating,-
+Aug 29/07,2K,R,Pm,4769,-,M,A,19.5,S,-
