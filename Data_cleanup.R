@@ -1,5 +1,4 @@
-lct <- Sys.getlocale("LC_TIME"); Sys.setlocale("LC_TIME", "C")
-Sys.setlocale("LC_TIME", lct)
+Sys.setlocale("LC_ALL","English")
 
 # read in the datafiles:
 setwd("C:/Users/freek_000/Documents/PhD_Otto/Courses UBC/548O_Module/dwd3")
@@ -33,7 +32,12 @@ colnames(data_1985) #two trapID?
 #Fix columns of datasets to: 
 # 'Day', 'Month', 'Year', 'TrapID', 'New_recap','Species','Tag1', 'Tag2', 'Age', 'Weight', 'Condition', 'Remarks'
 
+#DONE: 
+# - dates
+
 #Fix 2011
+
+#date:
 
 data_2011 <- data_2011[-c(579:length(data_2011$Date)),]
 data_2011$DateNew <- as.vector(data_2011$Date)
@@ -41,6 +45,32 @@ data_2011$DateNew <- sub("ago","aug",data_2011$DateNew)
 data_2011$DateNew <- paste(data_2011$DateNew,"-2011", sep="")
 data_2011$Date <- as.Date(data_2011$DateNew, "%d-%b-%Y")
 data_2011$DateNew <- NULL
+data_2011$Date
+
+data_2011_temp <- data_2011
+## FINISHED
+
+#weight:
+data_2011$Wt[data_2011$Wt==""] <- NA
+data_2011$WtNew <- sub(" g","",data_2011$Wt)
+data_2011$WtNew <- sub(" ","",data_2011$WtNew)
+data_2011$WtNew[27] <- NA
+# split in two columns: "Weight <60" and "Weight >60"
+data_2011$Weight_SixtyPlus <- ifelse(data_2011$WtNew == ">60", 1, 0)
+data_2011$Wt <- sub(">60",NA,data_2011$WtNew)
+data_2011$Weight_SixtyMinus <- as.numeric(data_2011$Wt)
+data_2011$Weight_SixtyPlus
+data_2011$WtNew <- NULL
+data_2011$Wt <- NULL
+data_2011_temp <- data_2011
+
+# Species:
+data_2011$Spp. <- sub("Pm","Peromyscus maniculatus",data_2011$Spp.)
+data_2011$Spp. <- sub("Mg","Myodes gapperi",data_2011$Spp.)
+data_2011$Spp. <- sub("Zp","Zapus princeps",data_2011$Spp.)
+colnames(data_2011)[4] <- "Species"
+
+##NOT FINISHED
 
 #Fix 2010
 
