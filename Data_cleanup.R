@@ -59,7 +59,6 @@ data_2011$WtNew[27] <- NA
 data_2011$Weight_SixtyPlus <- ifelse(data_2011$WtNew == ">60", 1, 0)
 data_2011$Wt <- sub(">60",NA,data_2011$WtNew)
 data_2011$Weight_SixtyMinus <- as.numeric(data_2011$Wt)
-data_2011$Weight_SixtyPlus
 data_2011$WtNew <- NULL
 data_2011$Wt <- NULL
 data_2011_temp <- data_2011
@@ -69,8 +68,35 @@ data_2011$Spp. <- sub("Pm","Peromyscus maniculatus",data_2011$Spp.)
 data_2011$Spp. <- sub("Mg","Myodes gapperi",data_2011$Spp.)
 data_2011$Spp. <- sub("Zp","Zapus princeps",data_2011$Spp.)
 colnames(data_2011)[4] <- "Species"
-
+data_2011$Species <- as.factor(data_2011$Species)
+data_2011_temp <- data_2011
 ##NOT FINISHED
+
+# Sex:
+data_2011$Sex[data_2011$Sex==""] <- NA
+## NOT FINISHED : CHECK ? an 'space' case with
+#table(data_2011$Sex)
+# And make as factor..
+
+# TrapID:
+data_2011$Trap.[data_2011$Trap.==""] <- NA
+data_2011$Trap. <- sub("2B ","2B",data_2011$Trap.)
+data_2011$Trap. <- sub("1G ","1G",data_2011$Trap.)
+colnames(data_2011)[2] <- "TrapID"
+data_2011$TrapID <- as.factor(data_2011$TrapID)
+
+#Age:
+data_2011$Age
+data_2011$Age <- sub("J","Juvenile",data_2011$Age)
+data_2011$Age <- sub("A","Adult",data_2011$Age)
+data_2011$Age[data_2011$Age==""] <- NA
+data_2011$Age <- as.factor(data_2011$Age)
+# NOT FINISHED:
+# What is SA? (now replaced to SAdult, oeps)
+
+
+#Reproductive condition:
+colnames(data_2011)[9] <- "Reproductive_Condition"
 
 #Fix 2010
 
