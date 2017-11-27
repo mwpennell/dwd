@@ -158,6 +158,7 @@ data <- dplyr::bind_rows(data,data_1985)
 
 ### START THE CLEANUP PROCESS####
 datatemp <- data
+data <- datatemp
 # Sex 
 table(data$Sex)
 data$Sex[data$Sex==""] <- NA
@@ -169,6 +170,10 @@ data$Sex[data$Sex=="M?"] <- NA
 data$Sex[data$Sex=="N"] <- NA
 data$Sex[data$Sex=="NB"] <- NA
 data$Sex[data$Sex=="XXXX"] <- NA
+
+data$Sex <- sub("M","Male",data$Sex)
+data$Sex <- sub("F","Female",data$Sex)
+
 data$Sex <- as.factor(data$Sex)
 
 #New_Recap
@@ -195,10 +200,12 @@ data$Species <- sub("Mg","Myodes gapperi",data$Species)
 data$Species <- sub("Ml","Microtus longicaudus",data$Species)
 data$Species <- sub("Pi","Phenacomys intermedius",data$Species)
 data$Species <- sub("Zp","Zapus princeps",data$Species)
-data$Species <- sub("Cg","Clethrionomys gapperi",data$Species)
+data$Species <- sub("Cg","Myodes gapperi",data$Species) # Name got changed!
 data$Species <- sub("Ta","Tamias amoenus",data$Species)
 data$Species <- sub("Weasel","Mustela erminea",data$Species)
 data$Species <- sub("SHREW","Soricidae",data$Species)
+data$Species <- sub("Mn","Microtus pennsylvanicus",data$Species) # most likely a typo for Mp (communications John Millar)
+
 data$Species <- as.factor(data$Species)
 
 #Age
@@ -212,7 +219,18 @@ data$Age[data$Age=="X"] <- NA
 data$Age[data$Age=="XXXX"] <- NA
 
 data$Age <- sub("A ","A",data$Age)
-data$Age <- sub("J","Juvenile",data$Age)
+data$Age <- sub("AA","A",data$Age)
+data$Age <- sub("OW", "A",data$Age)
+data$Age <- sub("YY","Y",data$Age)
+data$Age <- sub("SA","S",data$Age)
+data$Age <- sub("Y","J",data$Age)
+data$Age <- sub("A/J","AJ",data$Age)
+data$Age <- sub("J/A","AJ",data$Age)
+data$Age <- sub("S","AJ",data$Age)
+data$Age <- sub("AJ","JA",data$Age)
+
+data$Age <- as.factor(data$Age)
+
 ## UNFINISHED BUISNESS ##
 
 #Weight
@@ -223,3 +241,96 @@ data$Weight[data$Weight=="?"] <- NA
 data$Weight[data$Weight=="XXXX"] <- NA
 data$Weight <- sub(" g","",data$Weight)
 
+data$Weight <- sub("> 60",">60",data$Weight)
+data$Weight <- sub("over 60",">60",data$Weight)
+data$Weight <- sub("past 60",">60",data$Weight)
+
+datatemp <- data
+data <- datatemp
+
+data$Weight[data$Weight=="6.5?" & (!is.na(data$Weight)) ] <- NA
+data$Weight[data$Weight=="60+" & (!is.na(data$Weight)) ] <- ">60"
+
+data$Weight <- sub("> ",">",data$Weight)
+
+data <- mutate(data, WeightCat = ifelse(grepl(">",data$Weight), Weight, NA))
+data$Weight[grepl(">",data$Weight)] <- NA
+
+data$Weight <- as.numeric(data$Weight)
+data$WeightCat <- as.factor(data$WeightCat)
+
+#Condition
+colnames(data)[10] <- "Reproductive_Condition"
+table(data$Reproductive_Condition)
+data$Reproductive_Condition[data$Reproductive_Condition==""] <- NA
+data$Reproductive_Condition[data$Reproductive_Condition=="-"] <- NA
+data$Reproductive_Condition[data$Reproductive_Condition=="?"] <- NA
+data$Reproductive_Condition[data$Reproductive_Condition=="????"] <- NA
+data$Reproductive_Condition[data$Reproductive_Condition=="XXXX"] <- NA
+
+data$Reproductive_Condition <- sub("B ","B",data$Reproductive_Condition)
+data$Reproductive_Condition <- sub("Preg","Pregnant",data$Reproductive_Condition)
+data$Reproductive_Condition <- sub("P ","Pregnant",data$Reproductive_Condition)
+data$Reproductive_Condition <- sub("PREG","Pregnant",data$Reproductive_Condition)
+data$Reproductive_Condition <- sub("PREG ","Pregnant",data$Reproductive_Condition)
+data$Reproductive_Condition <- sub("Pregnant ","Pregnant",data$Reproductive_Condition)
+data$Reproductive_Condition <- sub("preg","Pregnant",data$Reproductive_Condition)
+
+data$Reproductive_Condition <- sub("PregnantAND LAC","P/L",data$Reproductive_Condition)
+data$Reproductive_Condition <- sub("P, L","P/L",data$Reproductive_Condition)
+
+data$Reproductive_Condition <- sub("lactating","Lactating",data$Reproductive_Condition)
+data$Reproductive_Condition <- sub("L!","Lactating",data$Reproductive_Condition)
+data$Reproductive_Condition <- sub("LAC","Lactating",data$Reproductive_Condition)
+data$Reproductive_Condition <- sub("Lac","Lactating",data$Reproductive_Condition)
+data$Reproductive_Condition <- sub("L","Lactating",data$Reproductive_Condition)
+
+
+#remove ?
+data$Reproductive_Condition <- sub("L/Pregnant?","Remove",data$Reproductive_Condition)
+data$Reproductive_Condition <- sub("Remove?","Remove",data$Reproductive_Condition)
+
+### UNIFINISHED BUISNESS ###
+
+# Tag1
+data$Tag1[data$Tag1==""] <- NA
+data$Tag1[data$Tag1=="-"] <- NA
+data$Tag1[data$Tag1=="????"] <- NA
+data$Tag1[data$Tag1=="XXXXX"] <- NA
+
+data$Tag1 <- gsub("\\s*\\([^\\)]+\\)","",as.character(data$Tag1))
+data$Tag1[data$Tag1=="6447N" & (!is.na(data$Tag1)) ] <- 6447
+
+data <- mutate(data, Tag1Number = ifelse(!is.na(as.numeric(Tag1)), Tag1, NA))
+data$Tag1[!is.na(as.numeric(data$Tag1))] <- NA
+
+data$Comments <- paste(data$Comments,data$Tag1, sep=",Tag1: ")
+data$Tag1 <- data$Tag1Number
+data$Tag1Number <- NULL
+
+# Tag2
+table(data$Tag2)
+data$Tag2[data$Tag2==""] <- NA
+data$Tag2[data$Tag2=="XXXXX"] <- NA
+data$Tag2 <- gsub("\\s*\\([^\\)]+\\)","",as.character(data$Tag2))
+data$Tag2[data$Tag2=="6445N" & (!is.na(data$Tag2)) ] <- 6445
+data$Tag2[data$Tag2=="6450N" & (!is.na(data$Tag2)) ] <- 6450
+
+
+data <- mutate(data, Tag2Number = ifelse(!is.na(as.numeric(Tag2)), Tag2, NA))
+data$Tag2[!is.na(as.numeric(data$Tag2))] <- NA
+
+data$Comments <- paste(data$Comments,data$Tag2, sep=",Tag2: ")
+data$Tag2 <- data$Tag2Number
+data$Tag2Number <- NULL
+
+#Play with stats:
+
+library(dplyr)
+group_by_data <- group_by(data, Sex)
+
+summarise(group_by_data, mean_group = mean(Weight, na.rm = T), sd_group = sd(Weight, na.rm = T))
+t.test(log(Weight) ~ Sex, data = data, var.equal = TRUE)
+qqnorm(log(data$Weight), na.rm = TRUE)
+
+ggplot(data, aes(x = log(Weight))) + geom_histogram(binwidth = 0.04)
