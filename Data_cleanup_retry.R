@@ -155,3 +155,71 @@ data_1985$Tag1 <- as.character(data_1985$Tag1)
 data_1985$Tag2 <- as.character(data_1985$Tag2)
 data_1985$Weight <- as.character(data_1985$Weight)
 data <- dplyr::bind_rows(data,data_1985)
+
+### START THE CLEANUP PROCESS####
+datatemp <- data
+# Sex 
+table(data$Sex)
+data$Sex[data$Sex==""] <- NA
+data$Sex[data$Sex=="-"] <- NA
+data$Sex[data$Sex=="?"] <- NA
+data$Sex[data$Sex=="F?"] <- NA
+data$Sex[data$Sex=="FM"] <- NA
+data$Sex[data$Sex=="M?"] <- NA
+data$Sex[data$Sex=="N"] <- NA
+data$Sex[data$Sex=="NB"] <- NA
+data$Sex[data$Sex=="XXXX"] <- NA
+data$Sex <- as.factor(data$Sex)
+
+#New_Recap
+table(data$New_Recap)
+data$New_Recap[data$New_Recap==""] <- NA
+data$New_Recap[data$New_Recap=="-"] <- NA
+data$New_Recap[data$New_Recap=="?"] <- NA
+data$New_Recap[data$New_Recap=="R (?)"] <- NA
+data$New_Recap[data$New_Recap=="R? (No Tags)"] <- NA
+data$New_Recap[data$New_Recap=="XXXX"] <- NA
+data$New_Recap[data$New_Recap=="O"] <- NA
+data$New_Recap <- sub("R ","R",data$New_Recap)
+data$New_Recap <- sub("R","Recap",data$New_Recap)
+data$New_Recap <- sub("N","New",data$New_Recap)
+data$New_Recap <- as.factor(data$New_Recap)
+
+#Species
+table(data$Species)
+data$Species[data$Species==""] <- NA
+data$Species[data$Species=="-"] <- NA
+
+data$Species <- sub("Pm","Peromyscus maniculatus",data$Species)
+data$Species <- sub("Mg","Myodes gapperi",data$Species)
+data$Species <- sub("Ml","Microtus longicaudus",data$Species)
+data$Species <- sub("Pi","Phenacomys intermedius",data$Species)
+data$Species <- sub("Zp","Zapus princeps",data$Species)
+data$Species <- sub("Cg","Clethrionomys gapperi",data$Species)
+data$Species <- sub("Ta","Tamias amoenus",data$Species)
+data$Species <- sub("Weasel","Mustela erminea",data$Species)
+data$Species <- sub("SHREW","Soricidae",data$Species)
+data$Species <- as.factor(data$Species)
+
+#Age
+table(data$Age)
+data$Age[data$Age==""] <- NA
+data$Age[data$Age=="-"] <- NA
+data$Age[data$Age=="?"] <- NA
+data$Age[data$Age=="J?"] <- NA
+data$Age[data$Age=="x"] <- NA
+data$Age[data$Age=="X"] <- NA
+data$Age[data$Age=="XXXX"] <- NA
+
+data$Age <- sub("A ","A",data$Age)
+data$Age <- sub("J","Juvenile",data$Age)
+## UNFINISHED BUISNESS ##
+
+#Weight
+table(data$Weight)
+data$Weight[data$Weight==""] <- NA
+data$Weight[data$Weight=="-"] <- NA
+data$Weight[data$Weight=="?"] <- NA
+data$Weight[data$Weight=="XXXX"] <- NA
+data$Weight <- sub(" g","",data$Weight)
+
