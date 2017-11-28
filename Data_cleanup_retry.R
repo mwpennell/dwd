@@ -279,6 +279,7 @@ data$Reproductive_Condition[data$Reproductive_Condition=="P AND L" & (!is.na(dat
 data$Reproductive_Condition[data$Reproductive_Condition=="P, L" & (!is.na(data$Reproductive_Condition)) ] <- "LP"
 data$Reproductive_Condition[data$Reproductive_Condition=="P/L" & (!is.na(data$Reproductive_Condition)) ] <- "LP"
 data$Reproductive_Condition[data$Reproductive_Condition=="PREG AND LAC" & (!is.na(data$Reproductive_Condition)) ] <- "LP"
+data$Reproductive_Condition[data$Reproductive_Condition=="L/Preg" & (!is.na(data$Reproductive_Condition)) ] <- "LP"
 
 data$Reproductive_Condition[data$Reproductive_Condition=="LAC" & (!is.na(data$Reproductive_Condition)) ] <- "L"
 data$Reproductive_Condition[data$Reproductive_Condition=="lactating" & (!is.na(data$Reproductive_Condition)) ] <- "L"
@@ -286,12 +287,12 @@ data$Reproductive_Condition[data$Reproductive_Condition=="Lac" & (!is.na(data$Re
 data$Reproductive_Condition[data$Reproductive_Condition=="L" & (!is.na(data$Reproductive_Condition)) ] <- "Lactating"
 data$Reproductive_Condition[data$Reproductive_Condition=="L!" & (!is.na(data$Reproductive_Condition)) ] <- "Lactating"
 
-
 data$Reproductive_Condition[data$Reproductive_Condition=="preg" & (!is.na(data$Reproductive_Condition)) ] <- "P"
 data$Reproductive_Condition[data$Reproductive_Condition=="Preg" & (!is.na(data$Reproductive_Condition)) ] <- "P"
 data$Reproductive_Condition[data$Reproductive_Condition=="PREG" & (!is.na(data$Reproductive_Condition)) ] <- "P"
 data$Reproductive_Condition[data$Reproductive_Condition=="PREG " & (!is.na(data$Reproductive_Condition)) ] <- "P"
 data$Reproductive_Condition[data$Reproductive_Condition=="P " & (!is.na(data$Reproductive_Condition)) ] <- "P"
+data$Reproductive_Condition[data$Reproductive_Condition=="P" & (!is.na(data$Reproductive_Condition)) ] <- "Pregnant"
 
 data$Reproductive_Condition[data$Reproductive_Condition=="S " & (!is.na(data$Reproductive_Condition)) ] <- "Scrotal"
 data$Reproductive_Condition[data$Reproductive_Condition=="S" & (!is.na(data$Reproductive_Condition)) ] <- "Scrotal"
@@ -307,7 +308,17 @@ data$Reproductive_Condition[data$Reproductive_Condition=="preg?" & (!is.na(data$
 data$Reproductive_Condition[data$Reproductive_Condition=="L?" & (!is.na(data$Reproductive_Condition)) ] <- NA
 data$Reproductive_Condition[data$Reproductive_Condition=="S?" & (!is.na(data$Reproductive_Condition)) ] <- NA
 
+data$Reproductive_Condition[data$Reproductive_Condition=="P?/L" & (!is.na(data$Reproductive_Condition)) ] <- "L"
+data$Reproductive_Condition[data$Reproductive_Condition=="P/L?" & (!is.na(data$Reproductive_Condition)) ] <- "P"
 
+data$Reproductive_Condition[data$Reproductive_Condition=="NB/ P?" & (!is.na(data$Reproductive_Condition)) ] <- "NB"
+
+data$Reproductive_Condition[data$Reproductive_Condition=="Perf" & (!is.na(data$Reproductive_Condition)) ] <- "Perforate"
+
+data$Reproductive_Condition[data$Reproductive_Condition=="B" & (!is.na(data$Reproductive_Condition)) ] <- "Breeding"
+data$Reproductive_Condition[data$Reproductive_Condition=="NB" & (!is.na(data$Reproductive_Condition)) ] <- "NonBreeding"
+
+temp <- data[data$Reproductive_Condition=="dead" & (!is.na(data$Reproductive_Condition)), ]
 
 ### UNIFINISHED BUISNESS ###
 
@@ -324,6 +335,7 @@ data <- mutate(data, Tag1Number = ifelse(!is.na(as.numeric(Tag1)), Tag1, NA))
 data$Tag1[!is.na(as.numeric(data$Tag1))] <- NA
 
 data$Comments <- paste(data$Comments,data$Tag1, sep=",Tag1: ")
+
 data$Tag1 <- data$Tag1Number
 data$Tag1Number <- NULL
 data$Tag1 <- as.integer(data$Tag1)
