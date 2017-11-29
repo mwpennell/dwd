@@ -156,6 +156,9 @@ data_1985$Tag2 <- as.character(data_1985$Tag2)
 data_1985$Weight <- as.character(data_1985$Weight)
 data <- dplyr::bind_rows(data,data_1985)
 
+data <- data[-c(5036:length(data$Date)),]
+
+
 ### START THE CLEANUP PROCESS####
 datatemp <- data
 data <- datatemp
@@ -186,7 +189,7 @@ data$New_Recap[data$New_Recap=="R? (No Tags)"] <- NA
 data$New_Recap[data$New_Recap=="XXXX"] <- NA
 data$New_Recap[data$New_Recap=="O"] <- NA
 data$New_Recap <- sub("R ","R",data$New_Recap)
-data$New_Recap <- sub("R","Recap",data$New_Recap)
+data$New_Recap <- sub("R","Recapture",data$New_Recap)
 data$New_Recap <- sub("N","New",data$New_Recap)
 data$New_Recap <- as.factor(data$New_Recap)
 
@@ -228,6 +231,13 @@ data$Age <- sub("A/J","AJ",data$Age)
 data$Age <- sub("J/A","AJ",data$Age)
 data$Age <- sub("S","AJ",data$Age)
 data$Age <- sub("AJ","JA",data$Age)
+
+data$Age <- sub("A","Adult",data$Age)
+data$Age <- sub("J","Juvenile",data$Age)
+data$Age <- sub("JA","Juvenile/Adult",data$Age)
+
+
+table(data$Age)
 
 data$Age <- as.factor(data$Age)
 
@@ -298,17 +308,21 @@ data$Reproductive_Condition[data$Reproductive_Condition=="S " & (!is.na(data$Rep
 data$Reproductive_Condition[data$Reproductive_Condition=="S" & (!is.na(data$Reproductive_Condition)) ] <- "Scrotal"
 
 data$Reproductive_Condition[data$Reproductive_Condition=="NS " & (!is.na(data$Reproductive_Condition)) ] <- "NS"
-data$Reproductive_Condition[data$Reproductive_Condition=="NS" & (!is.na(data$Reproductive_Condition)) ] <- "NonScrotal"
 
-data$Reproductive_Condition[data$Reproductive_Condition=="SEMI-SCROTAL" & (!is.na(data$Reproductive_Condition)) ] <- "SemiScrotal"
+data$Reproductive_Condition[data$Reproductive_Condition=="SEMI-SCROTAL" & (!is.na(data$Reproductive_Condition)) ] <- "SS"
 
+# REMOVES THIS AND REPLACE BY MOVING THESE THINGS TO COLUMN "REP_COND = COMMENTS"
+data$Reproductive_Condition[data$Reproductive_Condition=="A" & (!is.na(data$Reproductive_Condition)) ] <- NA
 data$Reproductive_Condition[data$Reproductive_Condition=="P?" & (!is.na(data$Reproductive_Condition)) ] <- NA
 data$Reproductive_Condition[data$Reproductive_Condition=="P? " & (!is.na(data$Reproductive_Condition)) ] <- NA
 data$Reproductive_Condition[data$Reproductive_Condition=="preg?" & (!is.na(data$Reproductive_Condition)) ] <- NA
 data$Reproductive_Condition[data$Reproductive_Condition=="L?" & (!is.na(data$Reproductive_Condition)) ] <- NA
 data$Reproductive_Condition[data$Reproductive_Condition=="S?" & (!is.na(data$Reproductive_Condition)) ] <- NA
+data$Reproductive_Condition[data$Reproductive_Condition=="D" & (!is.na(data$Reproductive_Condition)) ] <- NA
+data$Reproductive_Condition[data$Reproductive_Condition=="dead" & (!is.na(data$Reproductive_Condition)) ] <- NA
+data$Reproductive_Condition[data$Reproductive_Condition=="had an ozzy red substance" & (!is.na(data$Reproductive_Condition)) ] <- NA
 
-data$Reproductive_Condition[data$Reproductive_Condition=="P?/L" & (!is.na(data$Reproductive_Condition)) ] <- "L"
+data$Reproductive_Condition[data$Reproductive_Condition=="P?/L" & (!is.na(data$Reproductive_Condition)) ] <- "Lactating"
 data$Reproductive_Condition[data$Reproductive_Condition=="P/L?" & (!is.na(data$Reproductive_Condition)) ] <- "P"
 
 data$Reproductive_Condition[data$Reproductive_Condition=="NB/ P?" & (!is.na(data$Reproductive_Condition)) ] <- "NB"
@@ -316,11 +330,111 @@ data$Reproductive_Condition[data$Reproductive_Condition=="NB/ P?" & (!is.na(data
 data$Reproductive_Condition[data$Reproductive_Condition=="Perf" & (!is.na(data$Reproductive_Condition)) ] <- "Perforate"
 
 data$Reproductive_Condition[data$Reproductive_Condition=="B" & (!is.na(data$Reproductive_Condition)) ] <- "Breeding"
-data$Reproductive_Condition[data$Reproductive_Condition=="NB" & (!is.na(data$Reproductive_Condition)) ] <- "NonBreeding"
 
-temp <- data[data$Reproductive_Condition=="dead" & (!is.na(data$Reproductive_Condition)), ]
+data <- mutate(data, Lactating = ifelse(grepl("Lactating",data$Reproductive_Condition), 1, NA))
+data$Reproductive_Condition[data$Reproductive_Condition=="Lactating" & (!is.na(data$Reproductive_Condition)) ] <- NA
 
-### UNIFINISHED BUISNESS ###
+data <- mutate(data, Breeding = ifelse(grepl("Breeding",data$Reproductive_Condition), 1, NA))
+data$Reproductive_Condition[data$Reproductive_Condition=="Breeding" & (!is.na(data$Reproductive_Condition)) ] <- NA
+
+data <- mutate(data, Immature = ifelse(grepl("Immature",data$Reproductive_Condition), 1, NA))
+data$Reproductive_Condition[data$Reproductive_Condition=="Immature" & (!is.na(data$Reproductive_Condition)) ] <- NA
+
+data <- mutate(data, Scrotal = ifelse(grepl("Scrotal",data$Reproductive_Condition), 1, NA))
+data$Reproductive_Condition[data$Reproductive_Condition=="Scrotal" & (!is.na(data$Reproductive_Condition)) ] <- NA
+
+data <- mutate(data, NonScrotal = ifelse(grepl("NS",data$Reproductive_Condition), 0, NA))
+data$Reproductive_Condition[data$Reproductive_Condition=="NS" & (!is.na(data$Reproductive_Condition)) ] <- NA
+
+data <- mutate(data, Pregnant = ifelse(grepl("Pregnant",data$Reproductive_Condition), 1, NA))
+data$Reproductive_Condition[data$Reproductive_Condition=="Pregnant" & (!is.na(data$Reproductive_Condition)) ] <- NA
+
+data <- mutate(data, NonBreeding = ifelse(grepl("NB",data$Reproductive_Condition), 0, NA))
+data$Reproductive_Condition[data$Reproductive_Condition=="NB" & (!is.na(data$Reproductive_Condition)) ] <- NA
+
+data$Pregnant[data$Reproductive_Condition=="LP" & (!is.na(data$Reproductive_Condition))] <- 1
+data$Lactating[data$Reproductive_Condition=="LP" & (!is.na(data$Reproductive_Condition))] <- 1
+data$Reproductive_Condition[data$Reproductive_Condition=="LP" & (!is.na(data$Reproductive_Condition)) ] <- NA
+
+data$Lactating[data$Reproductive_Condition=="L/Preg?" & (!is.na(data$Reproductive_Condition))] <- 1
+data$Reproductive_Condition[data$Reproductive_Condition=="L/Preg?" & (!is.na(data$Reproductive_Condition)) ] <- NA
+
+data$Breeding[data$Reproductive_Condition=="B, L" & (!is.na(data$Reproductive_Condition))] <- 1
+data$Lactating[data$Reproductive_Condition=="B, L" & (!is.na(data$Reproductive_Condition))] <- 1
+data$Reproductive_Condition[data$Reproductive_Condition=="B, L" & (!is.na(data$Reproductive_Condition)) ] <- NA
+
+data$Breeding[data$Reproductive_Condition=="B/L" & (!is.na(data$Reproductive_Condition))] <- 1
+data$Lactating[data$Reproductive_Condition=="B/L" & (!is.na(data$Reproductive_Condition))] <- 1
+data$Reproductive_Condition[data$Reproductive_Condition=="B/L" & (!is.na(data$Reproductive_Condition)) ] <- NA
+
+data$Breeding[data$Reproductive_Condition=="B/lactating" & (!is.na(data$Reproductive_Condition))] <- 1
+data$Lactating[data$Reproductive_Condition=="B/lactating" & (!is.na(data$Reproductive_Condition))] <- 1
+data$Reproductive_Condition[data$Reproductive_Condition=="B/lactating" & (!is.na(data$Reproductive_Condition)) ] <- NA
+
+data$Breeding[data$Reproductive_Condition=="P/B/L" & (!is.na(data$Reproductive_Condition))] <- 1
+data$Lactating[data$Reproductive_Condition=="P/B/L" & (!is.na(data$Reproductive_Condition))] <- 1
+data$Pregnant[data$Reproductive_Condition=="P/B/L" & (!is.na(data$Reproductive_Condition))] <- 1
+data$Reproductive_Condition[data$Reproductive_Condition=="P/B/L" & (!is.na(data$Reproductive_Condition)) ] <- NA
+
+data$Pregnant[data$Reproductive_Condition=="P/B" & (!is.na(data$Reproductive_Condition))] <- 1
+data$Breeding[data$Reproductive_Condition=="P/B" & (!is.na(data$Reproductive_Condition))] <- 1
+data$Reproductive_Condition[data$Reproductive_Condition=="P/B" & (!is.na(data$Reproductive_Condition)) ] <- NA
+
+#Already added it to NB so only the other:
+data$Pregnant[data$Reproductive_Condition=="NB/PREG" & (!is.na(data$Reproductive_Condition))] <- 1
+data$Reproductive_Condition[data$Reproductive_Condition=="NB/PREG" & (!is.na(data$Reproductive_Condition)) ] <- NA
+
+data$Pregnant[data$Reproductive_Condition=="P/NB" & (!is.na(data$Reproductive_Condition))] <- 1
+data$Reproductive_Condition[data$Reproductive_Condition=="P/NB" & (!is.na(data$Reproductive_Condition)) ] <- NA
+
+data$Comments <- paste(data$Comments,data$Reproductive_Condition, sep=",Rep_Con: ")
+data$Reproductive_Condition <- NULL
+
+data$Pregnant <- as.logical(data$Pregnant)
+data$NonBreeding <- as.logical(data$NonBreeding)
+data$Scrotal <- as.logical(data$Scrotal)
+data$NonScrotal <- as.logical(data$NonScrotal)
+data$Immature <- as.logical(data$Immature)
+data$Breeding <- as.logical(data$Breeding)
+data$Lactating <- as.logical(data$Lactating)
+
+convert_scrotal <- function(x){
+  if (is.na(x[1,"Scrotal"] & is.na(x[1, "NonScrotal"]))){
+    y <- NA
+  } else if (!is.na(x[1,"Scrotal"])){
+    y <- TRUE
+  } else {
+    y <- FALSE
+  }
+  y
+}
+
+sc <- vector()
+for (i in seq_len(nrow(data))){
+  sc[i] <- convert_scrotal(data[i,])
+}
+data$Scrotal <- sc
+data$NonScrotal <- NULL
+
+
+# BREEDING 
+convert_breeding <- function(x){
+  if (is.na(x[1,"Breeding"] & is.na(x[1, "NonBreeding"]))){
+    y <- NA
+  } else if (!is.na(x[1,"Breeding"])){
+    y <- TRUE
+  } else {
+    y <- FALSE
+  }
+  y
+}
+
+sc <- vector()
+for (i in seq_len(nrow(data))){
+  sc[i] <- convert_breeding(data[i,])
+}
+data$Breeding <- sc
+data$NonBreeding <- NULL
 
 # Tag1
 data$Tag1[data$Tag1==""] <- NA
@@ -360,6 +474,14 @@ data$Tag2 <- as.integer(data$Tag2)
 data$Tag2[data$Tag2=="-520" & (!is.na(data$Tag2)) ] <- 520
 data$Tag1[data$Tag1=="24" & (!is.na(data$Tag1)) ] <- 234
 data$Tag2[data$Tag2=="47777" & (!is.na(data$Tag2)) ] <- 4776
+
+colnames(data)
+#REORDER COLUMN NAMES:
+data <- data[c("Date", "TrapID", "Tag1", "Tag2", "New_Recap","Species", "Sex", "Age", "Weight", "WeightCat", "Immature",  "Scrotal", "Breeding", "Lactating", "Pregnant", "Comments")]
+
+#Export data to csv:
+write.csv(data,'data_temp.csv')
+
 #Play with stats:
 
 library(dplyr)
