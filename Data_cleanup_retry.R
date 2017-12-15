@@ -1,3 +1,5 @@
+library(dplyr)
+
 setwd("C:/Users/freek_000/Documents/PhD_Otto/Courses UBC/548O_Module/dwd3")
 data_1985 <- read.csv("data/Fortress_Live_trap_1985.csv")
 data_1986 <- read.csv("data/Fortress_Live_trap_1986.csv")
@@ -75,6 +77,16 @@ data_1985$DateNew <- as.vector(data_1985$Date)
 data_1985$Date <- as.Date(as.vector(data_1985$DateNew), "%d-%b-%y")
 data_1985$DateNew <- NULL
 
+# Fix TrapID 1985 1986
+data_1985_temp <- tidyr::separate(TrapID, c("TrapID1", "TrapID2"), ",", extra = "merge", data=data_1985)
+data_1985_temp$TrapID1 <- as.numeric(data_1985_temp$TrapID1) 
+data_1985_temp$TrapID2 <- as.numeric(data_1985_temp$TrapID2) 
+
+data_1986_temp <- tidyr::separate(TrapID, c("TrapID1", "TrapID2"), ",", extra = "merge", data=data_1986)
+data_1986_temp$TrapID1 <- as.numeric(data_1986_temp$TrapID1) 
+data_1986_temp$TrapID2 <- as.numeric(data_1986_temp$TrapID2) 
+
+summary(data_1985_temp)
 
 #Merge 2011 and 2010
 colnames(data_2011) <- c("Date", "TrapID", "New_Recap", "Species", "Tag1", "Tag2", "Sex", "Age", "Weight", "Condition", "Comments")
@@ -241,7 +253,6 @@ table(data$Age)
 
 data$Age <- as.factor(data$Age)
 
-## UNFINISHED BUISNESS ##
 
 #Weight
 table(data$Weight)
@@ -479,6 +490,7 @@ colnames(data)
 #REORDER COLUMN NAMES:
 data <- data[c("Date", "TrapID", "Tag1", "Tag2", "New_Recap","Species", "Sex", "Age", "Weight", "WeightCat", "Immature",  "Scrotal", "Breeding", "Lactating", "Pregnant", "Comments")]
 
+
 #Export data to csv:
 write.csv(data,'data_temp.csv')
 
@@ -492,3 +504,7 @@ t.test(log(Weight) ~ Sex, data = data, var.equal = TRUE)
 qqnorm(log(data$Weight), na.rm = TRUE)
 
 ggplot(data, aes(x = log(Weight))) + geom_histogram(binwidth = 0.04)
+
+df <- data.frame(ID=11:13, FOO=c('a|b','bc','x|y'))
+foo <- within(df, FOO<-data.frame(do.call('rbind', strsplit(as.character(FOO), '|', fixed=TRUE))))
+
