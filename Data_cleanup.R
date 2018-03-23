@@ -1,6 +1,6 @@
 library(dplyr)
+getwd()
 
-setwd("C:/Users/freek_000/Documents/PhD_Otto/Courses UBC/548O_Module/dwd3")
 data_1985 <- read.csv("data/Fortress_Live_trap_1985.csv")
 data_1986 <- read.csv("data/Fortress_Live_trap_1986.csv")
 data_1993 <- read.csv("data/Fortress_Live_trap_1993.csv")
