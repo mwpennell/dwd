@@ -1,0 +1,12 @@
+---
+title: "Adding whale pictiure :) "
+author: "Sarah"
+date: '2017-11-09'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+![](http://www.cbc.ca/natureofthings/content/images/blog/thinklikeananimal_spermwhales2.jpg)
